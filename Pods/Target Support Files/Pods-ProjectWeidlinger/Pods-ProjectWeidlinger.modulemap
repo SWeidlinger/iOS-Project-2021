@@ -1,0 +1,6 @@
+framework module Pods_ProjectWeidlinger {
+  umbrella header "Pods-ProjectWeidlinger-umbrella.h"
+
+  export *
+  module * { export * }
+}

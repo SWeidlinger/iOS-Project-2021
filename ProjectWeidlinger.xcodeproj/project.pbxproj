@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3944969E35A1EB5D242B502E /* Pods_ProjectWeidlinger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4085FDB00029631EE9C0CDA /* Pods_ProjectWeidlinger.framework */; };
 		7677009926808ACE002B5383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677009826808ACE002B5383 /* AppDelegate.swift */; };
 		7677009B26808ACE002B5383 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677009A26808ACE002B5383 /* SceneDelegate.swift */; };
-		7677009D26808ACE002B5383 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677009C26808ACE002B5383 /* ViewController.swift */; };
 		767700A026808ACE002B5383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7677009E26808ACE002B5383 /* Main.storyboard */; };
 		767700A226808ACF002B5383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767700A126808ACF002B5383 /* Assets.xcassets */; };
 		767700A526808ACF002B5383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767700A326808ACF002B5383 /* LaunchScreen.storyboard */; };
+		767700AE2681CC18002B5383 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767700AD2681CC18002B5383 /* LoginViewController.swift */; };
+		767700B02681CC25002B5383 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767700AF2681CC25002B5383 /* SignUpViewController.swift */; };
+		767700B22681CC44002B5383 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767700B12681CC44002B5383 /* HomeTableViewController.swift */; };
+		767700B42681EF76002B5383 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 767700B32681EF76002B5383 /* GoogleService-Info.plist */; };
+		767700B62681F2DD002B5383 /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767700B52681F2DD002B5383 /* HomeNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48E5F964A46BE58C79F2137C /* Pods-ProjectWeidlinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectWeidlinger.release.xcconfig"; path = "Target Support Files/Pods-ProjectWeidlinger/Pods-ProjectWeidlinger.release.xcconfig"; sourceTree = "<group>"; };
 		7677009526808ACE002B5383 /* ProjectWeidlinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectWeidlinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7677009826808ACE002B5383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7677009A26808ACE002B5383 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7677009C26808ACE002B5383 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7677009F26808ACE002B5383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		767700A126808ACF002B5383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		767700A426808ACF002B5383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		767700A626808ACF002B5383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		767700AD2681CC18002B5383 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ProjectWeidlinger/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		767700AF2681CC25002B5383 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		767700B12681CC44002B5383 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		767700B32681EF76002B5383 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		767700B52681F2DD002B5383 /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
+		940F6438D815E96D681104BD /* Pods-ProjectWeidlinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectWeidlinger.debug.xcconfig"; path = "Target Support Files/Pods-ProjectWeidlinger/Pods-ProjectWeidlinger.debug.xcconfig"; sourceTree = "<group>"; };
+		B4085FDB00029631EE9C0CDA /* Pods_ProjectWeidlinger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectWeidlinger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3944969E35A1EB5D242B502E /* Pods_ProjectWeidlinger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45EA384F5575E01FB81C948B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4085FDB00029631EE9C0CDA /* Pods_ProjectWeidlinger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7677008C26808ACE002B5383 = {
 			isa = PBXGroup;
 			children = (
 				7677009726808ACE002B5383 /* ProjectWeidlinger */,
 				7677009626808ACE002B5383 /* Products */,
+				CE53846AD54214F002B0FF52 /* Pods */,
+				45EA384F5575E01FB81C948B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +79,36 @@
 		7677009726808ACE002B5383 /* ProjectWeidlinger */ = {
 			isa = PBXGroup;
 			children = (
+				767700AC2681CBB3002B5383 /* ViewController */,
 				7677009826808ACE002B5383 /* AppDelegate.swift */,
 				7677009A26808ACE002B5383 /* SceneDelegate.swift */,
-				7677009C26808ACE002B5383 /* ViewController.swift */,
 				7677009E26808ACE002B5383 /* Main.storyboard */,
 				767700A126808ACF002B5383 /* Assets.xcassets */,
 				767700A326808ACF002B5383 /* LaunchScreen.storyboard */,
 				767700A626808ACF002B5383 /* Info.plist */,
+				767700B32681EF76002B5383 /* GoogleService-Info.plist */,
 			);
 			path = ProjectWeidlinger;
+			sourceTree = "<group>";
+		};
+		767700AC2681CBB3002B5383 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				767700AD2681CC18002B5383 /* LoginViewController.swift */,
+				767700AF2681CC25002B5383 /* SignUpViewController.swift */,
+				767700B12681CC44002B5383 /* HomeTableViewController.swift */,
+				767700B52681F2DD002B5383 /* HomeNavigationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE53846AD54214F002B0FF52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				940F6438D815E96D681104BD /* Pods-ProjectWeidlinger.debug.xcconfig */,
+				48E5F964A46BE58C79F2137C /* Pods-ProjectWeidlinger.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 767700A926808ACF002B5383 /* Build configuration list for PBXNativeTarget "ProjectWeidlinger" */;
 			buildPhases = (
+				25313633B69927C9552C4837 /* [CP] Check Pods Manifest.lock */,
 				7677009126808ACE002B5383 /* Sources */,
 				7677009226808ACE002B5383 /* Frameworks */,
 				7677009326808ACE002B5383 /* Resources */,
+				07AD66327A9B2DF6F0A7FBF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				767700A526808ACF002B5383 /* LaunchScreen.storyboard in Resources */,
+				767700B42681EF76002B5383 /* GoogleService-Info.plist in Resources */,
 				767700A226808ACF002B5383 /* Assets.xcassets in Resources */,
 				767700A026808ACE002B5383 /* Main.storyboard in Resources */,
 			);
@@ -132,14 +179,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07AD66327A9B2DF6F0A7FBF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProjectWeidlinger/Pods-ProjectWeidlinger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProjectWeidlinger/Pods-ProjectWeidlinger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProjectWeidlinger/Pods-ProjectWeidlinger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25313633B69927C9552C4837 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProjectWeidlinger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7677009126808ACE002B5383 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7677009D26808ACE002B5383 /* ViewController.swift in Sources */,
+				767700B22681CC44002B5383 /* HomeTableViewController.swift in Sources */,
+				767700AE2681CC18002B5383 /* LoginViewController.swift in Sources */,
 				7677009926808ACE002B5383 /* AppDelegate.swift in Sources */,
+				767700B62681F2DD002B5383 /* HomeNavigationViewController.swift in Sources */,
 				7677009B26808ACE002B5383 /* SceneDelegate.swift in Sources */,
+				767700B02681CC25002B5383 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +375,7 @@
 		};
 		767700AA26808ACF002B5383 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 940F6438D815E96D681104BD /* Pods-ProjectWeidlinger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +395,7 @@
 		};
 		767700AB26808ACF002B5383 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48E5F964A46BE58C79F2137C /* Pods-ProjectWeidlinger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
