@@ -6,15 +6,48 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class HomeTableViewController: UITableViewController {
-    let data = [["Very important stuff", "even more Important Stuff", "soo much important stuff"], ["not so important Stuff", "still kinda important tho"], ["dont even bother doing this stuff here"]]
+    var data = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "\(UserDefaults().string(forKey: "firstName") ?? "User")'s Tasks"
+        tableView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
+        fetchFirebaseData()
     }
-
+    
+    func fetchFirebaseData(){
+        let priorityRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid)
+        var priority3 = [String]()
+        priorityRef.getDocument{(document, error) in
+            if let document = document{
+                let property = document.get("priority3") as! [String]
+                priority3 = property
+            }
+        }
+        
+        var priority2 = [String]()
+        priorityRef.getDocument{(document, error) in
+            if let document = document{
+                let property = document.get("priority2") as! [String]
+                priority2 = property
+            }
+        }
+        
+        var priority1 = [String]()
+        priorityRef.getDocument{(document, error) in
+            if let document = document{
+                let property = document.get("priority1") as! [String]
+                priority1 = property
+            }
+            self.data = [priority3, priority2, priority1]
+            self.tableView.reloadData()
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return data.count
@@ -71,10 +104,21 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            
+            let taskToRemove = data[indexPath.section][indexPath.row]
+            let priorityRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid)
+                self.data[indexPath.section].remove(at: indexPath.row)
+                priorityRef.updateData(["priority\(3 - indexPath.section)": FieldValue.arrayRemove(["\(taskToRemove)"])])
+                tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        else if editingStyle == .insert{
-            
+    }
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "AddTaskVC") as! AddTaskViewController
+        vc.update = {
+            DispatchQueue.main.async {
+                self.fetchFirebaseData()
+            }
         }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
