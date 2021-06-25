@@ -87,6 +87,7 @@ class SignUpViewController: UIViewController {
                             self.showError("Error saving user data")
                         }
                     }
+                    UserDefaults().setValue(firstName, forKey: "firstName")
                     //transition to home screen
                     self.transitionToHome()
                 }

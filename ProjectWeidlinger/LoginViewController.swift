@@ -11,6 +11,7 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -20,6 +21,7 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setUpElements()
+        activityIndicator.color = UIColor.black
     }
     
     func setUpElements(){
@@ -50,7 +52,7 @@ class LoginViewController: UIViewController {
             showError(error!)
         }
         else{
-            
+            activityIndicator.startAnimating()
             //create cleaned text of textfields
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -64,11 +66,19 @@ class LoginViewController: UIViewController {
                     self.errorLabel.alpha = 1
                 }
                 else{
-                    
-                    let homeNavigationVC = self.storyboard?.instantiateViewController(identifier: "homeNavigationVC") as? HomeNavigationViewController
-                    
-                    self.view.window?.rootViewController = homeNavigationVC
-                    self.view.window?.makeKeyAndVisible()
+                    let docRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid)
+                    docRef.getDocument{(document, error) in
+                        if let document = document{
+                            let property = document.get("firstName")
+                            UserDefaults.standard.set(property as! String, forKey: "firstName")
+                        }
+                        let homeNavigationVC = self.storyboard?.instantiateViewController(identifier: "homeNavigationVC") as? HomeNavigationViewController
+                        
+                        self.activityIndicator.stopAnimating()
+                        
+                        self.view.window?.rootViewController = homeNavigationVC
+                        self.view.window?.makeKeyAndVisible()
+                    }
                 }
             }
         }
