@@ -1,13 +1,13 @@
 //
-//  HomeNavigationViewController.swift
+//  HomeNavigationController.swift
 //  ProjectWeidlinger
 //
-//  Created by Sebastian Weidlinger on 22.06.21.
+//  Created by Sebastian Weidlinger on 26.06.21.
 //
 
 import UIKit
 
-class HomeNavigationViewController: UINavigationController {
+class HomeNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

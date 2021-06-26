@@ -14,7 +14,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "\(UserDefaults().string(forKey: "firstName") ?? "User")'s Tasks"
+        title = "\(UserDefaults().string(forKey: "firstName") ?? "User")'s S****"
         tableView.contentInset = UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
         fetchFirebaseData()
     }
@@ -66,31 +66,61 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 1, green: 0.6, blue: 0.1, alpha: 1)
+        var color = UIColor()
+        let current = UserDefaults().integer(forKey: "sectionColor")
+        switch current{
+        case 1:
+            color = UIColor.systemBlue
+        case 2:
+            color = UIColor.systemGreen
+        case 3:
+            color = UIColor.systemYellow
+        case 4:
+            color = UIColor.systemOrange
+        case 5:
+            color = UIColor.systemPurple
+        default:
+            color = UIColor.systemGray
+        }
+        
+        view.backgroundColor = color
         view.layer.cornerRadius = 10
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOffset = CGSize.zero
-        view.layer.shadowRadius = 3
-        view.layer.shadowOpacity = 0.5
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 2
         
         let label = UILabel()
         label.text = "Priority \(3 - section)"
         label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = UIColor.white
         label.frame = CGRect (x: 15, y: 0, width: 100, height: 40)
         view.addSubview(label)
         
         if (section == 0 && data[0].count > 2) {
-            let button = UIButton(frame: CGRect(x: 240, y: 7.5, width: 100, height: 25))
-            button.setTitle("Cheer me up", for: .normal)
-            button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-            //button.backgroundColor = UIColor.lightGray
-            button.setTitleColor(UIColor.black, for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 15)
-            button.layer.cornerRadius = 10
+            let button = showCheerMeUpButton()
+            view.addSubview(button)
+        }
+        else if (section == 1 && data[1].count > 4) {
+            let button = showCheerMeUpButton()
+            view.addSubview(button)
+        }
+        else if (section == 2 && data[2].count > 6) {
+            let button = showCheerMeUpButton()
             view.addSubview(button)
         }
         
         return view
+    }
+    
+    func showCheerMeUpButton() -> UIButton {
+        let button = UIButton(frame: CGRect(x: 240, y: 7.5, width: 100, height: 25))
+        button.setTitle("Sh**** day?", for: .normal)
+        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.white.cgColor
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 15)
+        button.layer.cornerRadius = 10
+        return button
     }
     
     @objc func buttonClicked(sender: UIButton){
@@ -102,18 +132,32 @@ class HomeTableViewController: UITableViewController {
         return 40
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             let taskToRemove = data[indexPath.section][indexPath.row]
             let priorityRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid)
-                self.data[indexPath.section].remove(at: indexPath.row)
-                priorityRef.updateData(["priority\(3 - indexPath.section)": FieldValue.arrayRemove(["\(taskToRemove)"])])
-                tableView.deleteRows(at: [indexPath], with: .fade)
+            self.data[indexPath.section].remove(at: indexPath.row)
+            priorityRef.updateData(["priority\(3 - indexPath.section)": FieldValue.arrayRemove(["\(taskToRemove)"])])
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
         }
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "AddTaskVC") as! AddTaskViewController
+        vc.update = {
+            DispatchQueue.main.async {
+                self.fetchFirebaseData()
+            }
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func settingsButtonTapped(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "SettingsVC") as! SettingsViewController
         vc.update = {
             DispatchQueue.main.async {
                 self.fetchFirebaseData()

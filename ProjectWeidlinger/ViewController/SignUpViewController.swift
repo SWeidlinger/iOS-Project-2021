@@ -10,17 +10,21 @@ import Firebase
 import FirebaseAuth
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        signUpButton.layer.borderColor = UIColor.black.cgColor
+        signUpButton.layer.borderWidth = 2
+        signUpButton.layer.cornerRadius = 10
+        firstNameTextField.becomeFirstResponder()
         // Do any additional setup after loading the view.
         setUpElements()
     }
@@ -38,8 +42,8 @@ class SignUpViewController: UIViewController {
         
         //check that all fields are filled returns error message if not filled
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
             return "Please fill in all the fields"
@@ -66,8 +70,8 @@ class SignUpViewController: UIViewController {
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-           // let achievements = String[""]
-
+            // let achievements = String[""]
+            
             
             //create the user
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
@@ -88,11 +92,12 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     UserDefaults().setValue(firstName, forKey: "firstName")
+                    UserDefaults.standard.set(6, forKey: "sectionColor")
                     //transition to home screen
                     self.transitionToHome()
                 }
             }
-           
+            
         }
     }
     
@@ -103,7 +108,7 @@ class SignUpViewController: UIViewController {
     
     func transitionToHome(){
         
-       let homeNavigation = storyboard?.instantiateViewController(identifier: "homeNavigationVC") as? HomeNavigationViewController
+        let homeNavigation = storyboard?.instantiateViewController(identifier: "homeNavigationVC") as? HomeNavigationController
         
         view.window?.rootViewController = homeNavigation
         view.window?.makeKeyAndVisible()

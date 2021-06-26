@@ -11,6 +11,8 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,6 +20,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.borderColor = UIColor.black.cgColor
+        loginButton.layer.borderWidth = 2
+        loginButton.layer.cornerRadius = 10
+        signUpButton.layer.borderColor = UIColor.black.cgColor
+        signUpButton.layer.borderWidth = 2
+        signUpButton.layer.cornerRadius = 10
         
         // Do any additional setup after loading the view.
         setUpElements()
@@ -53,6 +61,7 @@ class LoginViewController: UIViewController {
             showError(error!)
         }
         else{
+            self.errorLabel.alpha = 0
             activityIndicator.startAnimating()
             //create cleaned text of textfields
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -65,15 +74,17 @@ class LoginViewController: UIViewController {
                     //couldnt sign in
                     self.errorLabel.text = "Email or Password incorrect"
                     self.errorLabel.alpha = 1
+                    self.activityIndicator.stopAnimating()
                 }
                 else{
+                    self.errorLabel.alpha = 0
                     let docRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid)
                     docRef.getDocument{(document, error) in
                         if let document = document{
                             let property = document.get("firstName")
                             UserDefaults.standard.set(property as! String, forKey: "firstName")
                         }
-                        let homeNavigationVC = self.storyboard?.instantiateViewController(identifier: "homeNavigationVC") as? HomeNavigationViewController
+                        let homeNavigationVC = self.storyboard?.instantiateViewController(identifier: "homeNavigationVC") as? HomeNavigationController
                         
                         self.activityIndicator.stopAnimating()
                         

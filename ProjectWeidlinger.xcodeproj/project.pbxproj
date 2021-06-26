@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3944969E35A1EB5D242B502E /* Pods_ProjectWeidlinger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4085FDB00029631EE9C0CDA /* Pods_ProjectWeidlinger.framework */; };
 		7626224D2685C8A8002865F1 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626224C2685C8A8002865F1 /* AddTaskViewController.swift */; };
+		76762A9E26873B10001BEF24 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762A9D26873B10001BEF24 /* ChangePasswordViewController.swift */; };
+		76762AA02687AB0A001BEF24 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762A9F2687AB0A001BEF24 /* SettingsViewController.swift */; };
+		76762AA22687B697001BEF24 /* SectionColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762AA12687B697001BEF24 /* SectionColorViewController.swift */; };
+		76762AA42687C6AA001BEF24 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762AA32687C6AA001BEF24 /* HomeNavigationController.swift */; };
 		7677009926808ACE002B5383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677009826808ACE002B5383 /* AppDelegate.swift */; };
 		7677009B26808ACE002B5383 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677009A26808ACE002B5383 /* SceneDelegate.swift */; };
 		767700A026808ACE002B5383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7677009E26808ACE002B5383 /* Main.storyboard */; };
@@ -18,13 +22,16 @@
 		767700B02681CC25002B5383 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767700AF2681CC25002B5383 /* SignUpViewController.swift */; };
 		767700B22681CC44002B5383 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767700B12681CC44002B5383 /* HomeTableViewController.swift */; };
 		767700B42681EF76002B5383 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 767700B32681EF76002B5383 /* GoogleService-Info.plist */; };
-		767700B62681F2DD002B5383 /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767700B52681F2DD002B5383 /* HomeNavigationViewController.swift */; };
 		76EAEDF8268685A700B1F0E6 /* CheerMeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAEDF7268685A700B1F0E6 /* CheerMeUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48E5F964A46BE58C79F2137C /* Pods-ProjectWeidlinger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectWeidlinger.release.xcconfig"; path = "Target Support Files/Pods-ProjectWeidlinger/Pods-ProjectWeidlinger.release.xcconfig"; sourceTree = "<group>"; };
 		7626224C2685C8A8002865F1 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		76762A9D26873B10001BEF24 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		76762A9F2687AB0A001BEF24 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		76762AA12687B697001BEF24 /* SectionColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionColorViewController.swift; sourceTree = "<group>"; };
+		76762AA32687C6AA001BEF24 /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		7677009526808ACE002B5383 /* ProjectWeidlinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectWeidlinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7677009826808ACE002B5383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7677009A26808ACE002B5383 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +43,6 @@
 		767700AF2681CC25002B5383 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		767700B12681CC44002B5383 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		767700B32681EF76002B5383 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		767700B52681F2DD002B5383 /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
 		76EAEDF7268685A700B1F0E6 /* CheerMeUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheerMeUpViewController.swift; sourceTree = "<group>"; };
 		940F6438D815E96D681104BD /* Pods-ProjectWeidlinger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectWeidlinger.debug.xcconfig"; path = "Target Support Files/Pods-ProjectWeidlinger/Pods-ProjectWeidlinger.debug.xcconfig"; sourceTree = "<group>"; };
 		B4085FDB00029631EE9C0CDA /* Pods_ProjectWeidlinger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectWeidlinger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,12 +104,15 @@
 		767700AC2681CBB3002B5383 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				76762A9D26873B10001BEF24 /* ChangePasswordViewController.swift */,
 				767700AD2681CC18002B5383 /* LoginViewController.swift */,
 				767700AF2681CC25002B5383 /* SignUpViewController.swift */,
 				767700B12681CC44002B5383 /* HomeTableViewController.swift */,
-				767700B52681F2DD002B5383 /* HomeNavigationViewController.swift */,
 				7626224C2685C8A8002865F1 /* AddTaskViewController.swift */,
 				76EAEDF7268685A700B1F0E6 /* CheerMeUpViewController.swift */,
+				76762A9F2687AB0A001BEF24 /* SettingsViewController.swift */,
+				76762AA12687B697001BEF24 /* SectionColorViewController.swift */,
+				76762AA32687C6AA001BEF24 /* HomeNavigationController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -235,11 +244,14 @@
 				767700B22681CC44002B5383 /* HomeTableViewController.swift in Sources */,
 				767700AE2681CC18002B5383 /* LoginViewController.swift in Sources */,
 				7677009926808ACE002B5383 /* AppDelegate.swift in Sources */,
-				767700B62681F2DD002B5383 /* HomeNavigationViewController.swift in Sources */,
+				76762AA02687AB0A001BEF24 /* SettingsViewController.swift in Sources */,
+				76762A9E26873B10001BEF24 /* ChangePasswordViewController.swift in Sources */,
+				76762AA42687C6AA001BEF24 /* HomeNavigationController.swift in Sources */,
 				7677009B26808ACE002B5383 /* SceneDelegate.swift in Sources */,
 				76EAEDF8268685A700B1F0E6 /* CheerMeUpViewController.swift in Sources */,
 				767700B02681CC25002B5383 /* SignUpViewController.swift in Sources */,
 				7626224D2685C8A8002865F1 /* AddTaskViewController.swift in Sources */,
+				76762AA22687B697001BEF24 /* SectionColorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
