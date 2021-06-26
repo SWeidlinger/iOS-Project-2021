@@ -13,6 +13,7 @@
 		76762AA02687AB0A001BEF24 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762A9F2687AB0A001BEF24 /* SettingsViewController.swift */; };
 		76762AA22687B697001BEF24 /* SectionColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762AA12687B697001BEF24 /* SectionColorViewController.swift */; };
 		76762AA42687C6AA001BEF24 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762AA32687C6AA001BEF24 /* HomeNavigationController.swift */; };
+		76762AA62687D7A1001BEF24 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76762AA52687D7A1001BEF24 /* ForgotPasswordViewController.swift */; };
 		7677009926808ACE002B5383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677009826808ACE002B5383 /* AppDelegate.swift */; };
 		7677009B26808ACE002B5383 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677009A26808ACE002B5383 /* SceneDelegate.swift */; };
 		767700A026808ACE002B5383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7677009E26808ACE002B5383 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		76762A9F2687AB0A001BEF24 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		76762AA12687B697001BEF24 /* SectionColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionColorViewController.swift; sourceTree = "<group>"; };
 		76762AA32687C6AA001BEF24 /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
+		76762AA52687D7A1001BEF24 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		7677009526808ACE002B5383 /* ProjectWeidlinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectWeidlinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7677009826808ACE002B5383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7677009A26808ACE002B5383 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				76762A9F2687AB0A001BEF24 /* SettingsViewController.swift */,
 				76762AA12687B697001BEF24 /* SectionColorViewController.swift */,
 				76762AA32687C6AA001BEF24 /* HomeNavigationController.swift */,
+				76762AA52687D7A1001BEF24 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				76762AA42687C6AA001BEF24 /* HomeNavigationController.swift in Sources */,
 				7677009B26808ACE002B5383 /* SceneDelegate.swift in Sources */,
 				76EAEDF8268685A700B1F0E6 /* CheerMeUpViewController.swift in Sources */,
+				76762AA62687D7A1001BEF24 /* ForgotPasswordViewController.swift in Sources */,
 				767700B02681CC25002B5383 /* SignUpViewController.swift in Sources */,
 				7626224D2685C8A8002865F1 /* AddTaskViewController.swift in Sources */,
 				76762AA22687B697001BEF24 /* SectionColorViewController.swift in Sources */,
